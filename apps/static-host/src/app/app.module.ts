@@ -6,12 +6,14 @@ import { RouterModule } from '@angular/router';
 import { LauncherModule } from '@nx-ng-mfe/launcher';
 import { AuthGuard } from '@nx-ng-mfe/shared/data-access/auth';
 import { HttpClientModule } from '@angular/common/http';
+import { OAuthModule } from 'angular-oauth2-oidc';
 
 @NgModule({
   declarations: [AppComponent],
   imports: [
     BrowserModule,
     LauncherModule,
+    OAuthModule.forRoot(),
     HttpClientModule,
     RouterModule.forRoot(
       [
