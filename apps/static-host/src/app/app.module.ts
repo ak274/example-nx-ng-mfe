@@ -5,12 +5,14 @@ import { AppComponent } from './app.component';
 import { RouterModule } from '@angular/router';
 import { LauncherModule } from '@nx-ng-mfe/launcher';
 import { AuthGuard } from '@nx-ng-mfe/shared/data-access/auth';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [AppComponent],
   imports: [
     BrowserModule,
     LauncherModule,
+    HttpClientModule,
     RouterModule.forRoot(
       [
         {
@@ -36,6 +38,11 @@ import { AuthGuard } from '@nx-ng-mfe/shared/data-access/auth';
           path: 'login',
           loadChildren: () =>
             import('login/Module').then((m) => m.RemoteEntryModule),
+        },
+        {
+          path: 'todo',
+          loadChildren: () =>
+            import('todo/Module').then((m) => m.RemoteEntryModule),
         },
       ],
       { initialNavigation: 'enabledBlocking' }

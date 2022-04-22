@@ -24,6 +24,9 @@
       "@nx-ng-mfe/shared/data-access/auth": [
         "libs/shared/data-access/auth/src/index.ts"
       ],
+      "@nx-ng-mfe/shared/data-access/services": [
+        "libs/shared/data-access/services/src/index.ts"
+      ],
       "@nx-ng-mfe/todo/feature": ["libs/todo/feature/src/index.ts"]
     }
   },

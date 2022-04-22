@@ -3,6 +3,7 @@
   "root": "apps/static-host",
   "sourceRoot": "apps/static-host/src",
   "prefix": "nx-ng-mfe",
+  "implicitDependencies": ["login", "notes", "todo"],
   "targets": {
     "build": {
       "executor": "@nrwl/angular:webpack-browser",
@@ -60,7 +61,7 @@
       "defaultConfiguration": "production"
     },
     "serve": {
-      "executor": "@nrwl/angular:webpack-server",
+      "executor": "@nrwl/angular:module-federation-dev-server",
       "configurations": {
         "production": {
           "browserTarget": "static-host:build:production"
@@ -94,7 +95,7 @@
       "executor": "@nrwl/jest:jest",
       "outputs": ["coverage/apps/static-host"],
       "options": {
-        "jestConfig": "apps/static-host/jest.config.js",
+        "jestConfig": "apps/static-host/jest.config.ts",
         "passWithNoTests": true
       }
     },
