@@ -1,6 +1,5 @@
 {
   "projectType": "application",
-  "root": "apps/todo",
   "sourceRoot": "apps/todo/src",
   "prefix": "nx-ng-mfe",
   "targets": {

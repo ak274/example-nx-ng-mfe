@@ -1,6 +1,5 @@
 {
   "projectType": "application",
-  "root": "apps/notes",
   "sourceRoot": "apps/notes/src",
   "prefix": "nx-ng-mfe",
   "targets": {
